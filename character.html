@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces Avanzadas - Franco Santino Di Vilio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div id="character-info"></div>
+
+    <a href="index.html">Back</a>
+</body>
+<script src="./JS/script.js">
+    /*const parametros = new URLSearchParams(window.location.search);
+
+    const id = parametros.get("id");
+
+    const proxy = "https://cors-anywhere.herokuapp.com/";
+    
+    const apiKey = "clasificado";
+    
+    const urlPersonaje = "https://comicvine.gamespot.com/api/character/4005-" + id + "/?api_key=" + apiKey + "&format=json";
+
+    const urlFetch = proxy + urlPersonaje;
+
+    const container = document.getElementById("character-info");
+
+    console.log(urlPersonaje);
+    console.log(urlFetch);*/
+
+    /*fetch(urlFetch)
+    .then(response => response.json())
+    .then(dataJson =>
+    {
+        const personaje = dataJson.results;
+
+        container.innerHTML += 
+        "<h2>" + personaje.name + "</h2>" + 
+        "<p>" + personaje.real_name + "</p>" + 
+        "<img src='" + personaje.image.medium_url + "'>" +
+        "<p>" + personaje.deck + "</p>";
+
+        if(personaje.origin)
+    {
+        container.innerHTML +=
+        "<p>Species: " + personaje.origin.name + "</p>";
+    }
+    else
+    {
+        container.innerHTML +=
+        "<p>Species: Unknown</p>";
+    }
+
+        container.innerHTML += "<p>Count of issue appearances: " + personaje.count_of_issue_appearances + "</p>";
+        
+        console.log(dataJson);
+    })
+    .catch(e => console.error(e));*/
+
+</script>
+</html>
