@@ -15,54 +15,5 @@
 
     <div id="characters"></div>
 </body>
-<script src="./JS/script.js">
-
-    /*const proxy = "https://cors-anywhere.herokuapp.com/";
-    
-    const apiKey = "clasificado";*/
-    
-    /*const urlApi = "https://comicvine.gamespot.com/api/characters/?api_key="+ apiKey + "&format=json";
-
-    const urlFetch = proxy + urlApi;
-
-    const btn = document.getElementById("charger");
-
-    const container = document.getElementById("characters");
-    
-    fetch(urlFetch)
-    .then(response => response.json())
-    .then(dataJson =>
-    {
-    console.log(dataJson);
-
-    const personajes = dataJson.results;
-
-    for(let i=0; i<personajes.length; i++) {
-
-        const index = personajes[i];
-
-        container.innerHTML +=
-    "<a href='character.html?id=" + index.id + "'>" +
-    "<h2>" + index.name + "</h2>" +
-    "<p>" + index.real_name + "</p>" +
-    "<img src='" + index.image.medium_url + "'>" + "</a>" +
-    "<p>" + index.publisher.name + "</p>" +
-    "<p>" + index.deck + "</p>" +
-    "<p>Species: " + index.origin.name + "</p>" +
-    "<p>Count of issue appearances: " + index.count_of_issue_appearances + "</p>";
-
-    console.log(index.api_detail_url);
-    }
-    })
-    .catch(e => console.error(e));*/
-
-    /*btn.addEventListener("click", function() {
-
-    fetch(urlFetch)
-    .then()
-    .catch();
-
-});*/
-
-</script>
+<script src="./JS/script.js"></script>
 </html>
