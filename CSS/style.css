@@ -14,9 +14,8 @@ body {
 }
 
 h1 {
-    font-family: Oswald, sans-serif;
     font-size: 4rem;
-    color: #7FFF00;
+    color: #57ad01;
     margin-bottom: 30px;
 }
 
@@ -31,7 +30,8 @@ a:hover {
 }
 
 button {
-    background-color: #7FFF00;
+    background-color: #57ad01;
+    font-family: Lexend, sans-serif;
     color: black;
     border: none;
     padding: 12px 24px;
@@ -39,6 +39,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
+    transition: transform 0.2s;
 }
 
 button:hover {
