@@ -1,6 +1,6 @@
 const proxy = "https://cors-anywhere.herokuapp.com/";
     
-const apiKey = "clasificado"; /*modificado por cuestiones de seguridad*/
+const apiKey = "d2671ca1d8517baa8e40eee1fc5fc534baee4945"; /*modificado por cuestiones de seguridad*/
 
 const parametros = new URLSearchParams(window.location.search);
 
@@ -130,7 +130,7 @@ searchButton.addEventListener("click", function()
                 personaje.name && personaje.name.toLowerCase().includes(textoBuscado)
             )
             {
-                encontrados++;
+                found++;
 
                 searchResults.innerHTML += "<h2>Encontrado: " + personaje.name + "</h2>";
             }
