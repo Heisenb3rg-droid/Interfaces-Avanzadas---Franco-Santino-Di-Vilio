@@ -109,8 +109,6 @@ searchButton.addEventListener("click", function()
     const textoBuscado =
     searchInput.value.toLowerCase();
 
-    searchResults.innerHTML = "Searching...";
-
     fetch(urlFetch)
     .then(response => response.json())
     .then(dataJson =>
