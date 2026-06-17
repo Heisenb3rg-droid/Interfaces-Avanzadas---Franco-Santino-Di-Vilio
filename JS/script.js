@@ -6,9 +6,9 @@ const parametros = new URLSearchParams(window.location.search);
 
 const id = parametros.get("id");
 
-const btn = document.getElementById("charger");
-
 //index.html
+
+const btn = document.getElementById("charger");
 
 const containerCharacters = document.getElementById("characters");
 
