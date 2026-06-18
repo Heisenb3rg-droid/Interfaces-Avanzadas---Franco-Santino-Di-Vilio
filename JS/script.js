@@ -124,10 +124,7 @@ searchButton.addEventListener("click", function()
         {
             const personaje = personajes[i];
 
-            if(
-                personaje.name && personaje.name.toLowerCase().includes(textoBuscado)
-            )
-            {
+            if(personaje.name && personaje.name.toLowerCase().includes(textoBuscado)){
                 found++;
 
                 searchResults.innerHTML += "<h2>Encontrado: " + personaje.name + "</h2>";
