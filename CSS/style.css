@@ -23,6 +23,7 @@ a {
     color: #FFD700;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: transform 1s;
 }
 
 a:hover {
@@ -65,17 +66,4 @@ button:hover {
 #characters img {
     width: 100%;
     border-radius: 8px;
-}
-
-@media (max-width: 768px)
-{
-    h1
-    {
-        font-size: 2.5rem;
-    }
-
-    #characters a
-    {
-        width: 90%;
-    }
 }
