@@ -16,19 +16,22 @@ body {
 h1 {
     font-size: 4rem;
     color: #57ad01;
-    margin-bottom: 30px;
+    margin: 30vh 0 10vh 0;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a {
     color: #FFD700;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: text-decoration 0.2s;
+    transition: transform 0.2s;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
+
+#charger { margin-top: 10vh; }
 
 button {
     background-color: #57ad01;
@@ -37,7 +40,7 @@ button {
     border: none;
     padding: 12px 24px;
     margin: 20px;
-    font-size: 1rem;
+    font-size: 1em;
     cursor: pointer;
     border-radius: 8px;
     transition: transform 0.2s;
@@ -67,3 +70,7 @@ button:hover {
     width: 100%;
     border-radius: 8px;
 }
+
+#search-button { margin-left: 0.25vw; }
+
+#character-info { margin-top: 23vh; }
