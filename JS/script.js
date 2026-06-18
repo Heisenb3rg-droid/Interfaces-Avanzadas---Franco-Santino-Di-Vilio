@@ -1,3 +1,5 @@
+//Recordatorio: poner un innerHTML vacío dentro de search y poner un estructura condicional para msotrar nombre desconocido en caso de que el personaje no tenga nombre de verdad.
+
 const proxy = "https://cors-anywhere.herokuapp.com/";
     
 const apiKey = "d2671ca1d8517baa8e40eee1fc5fc534baee4945"; /*modificado por cuestiones de seguridad*/
