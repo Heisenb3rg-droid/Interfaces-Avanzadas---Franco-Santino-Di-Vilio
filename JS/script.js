@@ -39,9 +39,17 @@ if(containerCharacters) {
 
         containerCharacters.innerHTML +=
     "<a href='character.html?id=" + index.id + "'>" +
-    "<h2>" + index.name + "</h2>" +
-    "<p>" + index.real_name + "</p>" +
-    "<img src='" + index.image.medium_url + "'>" + "</a>";
+    "<h2>" + index.name + "</h2>";
+    
+    if(index.real_name) {
+        containerCharacters.innerHTML +=
+        "<p>" + index.real_name + "</p>";
+    } else {
+        containerCharacters.innerHTML +=
+        "<p>Unknown real name</p>";
+    }
+
+    containerCharacters.innerHTML += "<img src='" + index.image.medium_url + "'>" + "</a>";
 
 
     console.log(index.api_detail_url);
@@ -73,8 +81,17 @@ if(containerCharacter) {
         const personaje = dataJson.results;
 
         containerCharacter.innerHTML += 
-        "<h2>" + personaje.name + "</h2>" + 
-        "<p>" + personaje.real_name + "</p>" + 
+        "<h2>" + personaje.name + "</h2>";
+
+    if(personaje.real_name) {
+        containerCharacter.innerHTML +=
+        "<p>" + personaje.real_name + "</p>";
+    } else {
+        containerCharacter.innerHTML +=
+        "<p>Unknown real name</p>";
+    }
+
+        containerCharacter.innerHTML +=
         "<img src='" + personaje.image.medium_url + "'>" +
         "<p>" + personaje.deck + "</p>" +
         "<p>" + personaje.publisher.name + "</p>";
@@ -111,6 +128,8 @@ searchButton.addEventListener("click", function()
     const textoBuscado =
     searchInput.value.toLowerCase();
 
+    searchResults.innerHTML = "";
+
     fetch(urlFetch)
     .then(response => response.json())
     .then(dataJson =>
@@ -138,8 +157,7 @@ searchButton.addEventListener("click", function()
             searchResults.innerHTML = "<p>No characters found.</p>";
         }
     })
-    .catch(e =>
-    {
+    .catch(e => {
         console.error(e);
 
         searchResults.innerHTML =
