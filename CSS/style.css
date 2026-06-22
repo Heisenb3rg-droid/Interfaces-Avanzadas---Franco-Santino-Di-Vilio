@@ -35,7 +35,7 @@ a:hover { border-bottom-color: #FFD700; }
 
 #charger { margin-top: 10vh; padding: 2.25vh; }
 
-.loading { margin-bottom: 5vh; }
+.loading { margin-top: 0vh; margin-bottom: 10vh; }
 
 button {
     background-color: #57ad01;
@@ -50,16 +50,14 @@ button {
     transition: transform 0.2s;
 }
 
-button:hover {
-    transform: scale(1.05);
-}
+button:hover { transform: scale(1.05); }
 
 #characters {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
-    margin-top: 30vh;
+    margin-top: 10vh;
 }
 
 #characters a {
@@ -70,10 +68,7 @@ button:hover {
     display: block;
 }
 
-#characters img {
-    width: 100%;
-    border-radius: 8px;
-}
+#characters img { width: 100%; border-radius: 8px; }
 
 #search-button { margin-left: 0.25vw; }
 
