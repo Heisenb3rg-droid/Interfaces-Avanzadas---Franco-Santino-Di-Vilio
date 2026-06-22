@@ -1,5 +1,3 @@
-//Recordatorio: poner un innerHTML vacío dentro de search y poner un estructura condicional para msotrar nombre desconocido en caso de que el personaje no tenga nombre de verdad.
-
 const proxy = "https://cors-anywhere.herokuapp.com/";
     
 const apiKey = "d2671ca1d8517baa8e40eee1fc5fc534baee4945"; /*modificado por cuestiones de seguridad*/
@@ -21,7 +19,7 @@ if(containerCharacters) {
     
     btn.addEventListener("click", function() {
     
-    containerCharacters.innerHTML = "<p>Loading Comic Vine...</p>";
+    containerCharacters.innerHTML = "<p class='loading'>Loading Comic Vine...</p>";
 
     fetch(urlFetch)
     .then(response => response.json())
@@ -59,7 +57,7 @@ if(containerCharacters) {
         console.error(e);
 
         containerCharacters.innerHTML =
-        "<p>Error. Try again.</p>";
+        "<p class='loading'>Error. Try again.</p>";
     });
 });
 }
@@ -119,8 +117,8 @@ const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const searchResults = document.getElementById("search-results");
 
-searchButton.addEventListener("click", function()
-{
+if(searchInput && searchButton && searchResults) { 
+    searchButton.addEventListener("click", function() {
     const urlApi = "https://comicvine.gamespot.com/api/characters/?api_key="+ apiKey + "&format=json";
 
     const urlFetch = proxy + urlApi;
@@ -148,7 +146,10 @@ searchButton.addEventListener("click", function()
             if(personaje.name && personaje.name.toLowerCase().includes(textoBuscado)){
                 found++;
 
-                searchResults.innerHTML += "<h2>Encontrado: " + personaje.name + "</h2>";
+                searchResults.innerHTML += 
+                "<a href='character.html?id=" + personaje.id + "'>" +
+                "<h2>" + personaje.name + "</h2>" +
+                "</a>";
             }
         }
         
@@ -164,3 +165,4 @@ searchButton.addEventListener("click", function()
         "<p>Error searching characters.</p>";
     });
 });
+}
