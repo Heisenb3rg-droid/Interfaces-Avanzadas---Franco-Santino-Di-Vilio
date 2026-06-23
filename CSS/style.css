@@ -22,16 +22,17 @@ h1 {
     margin-right: auto;
 }
 
-a {
+.menu-link {
     color: #FFD700;
     text-decoration: none;
     font-size: 1.2em;
-    transition: border-bottom-color 0.2s ease;
-    display: inline-block;
     border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.2s ease;
 }
 
-a:hover { border-bottom-color: #FFD700; }
+.menu-link:hover {
+    border-bottom-color: #FFD700;
+}
 
 #charger { margin-top: 10vh; padding: 2.25vh; }
 
@@ -64,9 +65,16 @@ button:hover { transform: scale(1.05); }
     background-color: #222;
     padding: 1.5vh;
     border-radius: 10px;
-    width: 25%;
-    display: block;
+    width: 15vw;
+    display: flex;
+    color: #FFD700;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
 }
+
+#characters a:hover h2, #characters a:hover p { text-decoration: underline; }
 
 #characters img { width: 100%; border-radius: 8px; }
 

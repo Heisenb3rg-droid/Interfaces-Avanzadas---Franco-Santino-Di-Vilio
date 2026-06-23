@@ -37,18 +37,9 @@ if(containerCharacters) {
 
         containerCharacters.innerHTML +=
     "<a href='character.html?id=" + index.id + "'>" +
-    "<h2>" + index.name + "</h2>";
-    
-    if(index.real_name) {
-        containerCharacters.innerHTML +=
-        "<p>" + index.real_name + "</p>";
-    } else {
-        containerCharacters.innerHTML +=
-        "<p>Unknown real name</p>";
-    }
-
-    containerCharacters.innerHTML += "<img src='" + index.image.medium_url + "'>" + "</a>";
-
+    "<h2>" + index.name + "</h2>" +
+    "<p>" + (index.real_name || "Unknown real name") + "</p>" +
+    "<img src='" + index.image.medium_url + "'>" + "</a>";
 
     console.log(index.api_detail_url);
     }
