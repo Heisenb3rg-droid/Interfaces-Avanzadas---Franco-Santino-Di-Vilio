@@ -69,33 +69,16 @@ if(containerCharacter) {
     {
         const personaje = dataJson.results;
 
-        containerCharacter.innerHTML += 
-        "<h2>" + personaje.name + "</h2>";
-
-    if(personaje.real_name) {
         containerCharacter.innerHTML +=
-        "<p>" + personaje.real_name + "</p>";
-    } else {
-        containerCharacter.innerHTML +=
-        "<p>Unknown real name</p>";
-    }
-
-        containerCharacter.innerHTML +=
+        "<h2>" + personaje.name + "</h2>" +
+        "<p>" + (personaje.real_name || "Unknown real name") + "</p>" +
         "<img src='" + personaje.image.medium_url + "'>" +
-        "<p>" + personaje.deck + "</p>" +
-        "<p>" + personaje.publisher.name + "</p>";
-        if(personaje.origin)
-    {
-        containerCharacter.innerHTML +=
-        "<p>Species: " + personaje.origin.name + "</p>";
-    }
-    else
-    {
-        containerCharacter.innerHTML +=
-        "<p>Species: Unknown</p>";
-    }
-
-        containerCharacter.innerHTML += "<p>Count of issue appearances: " + personaje.count_of_issue_appearances + "</p>";
+        "<div class='character-details'>" +
+        "<p>" + (personaje.deck || "No description available") + "</p>" +
+        "<p>Publisher: " + (personaje.publisher.name || "Unknown publisher") + "</p>" +
+        "<p>Species: " + (personaje.origin ? personaje.origin.name : "Unknown") + "</p>" +
+        "<p>Count of issue appearances: " + (personaje.count_of_issue_appearances || "Unknown") + "</p>" 
+        + "</div>";
         
         console.log(dataJson);
     })
