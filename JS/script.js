@@ -98,9 +98,14 @@ if(searchInput && searchButton && searchResults) {
     const urlFetch = proxy + urlApi;
 
     const textoBuscado =
-    searchInput.value.toLowerCase();
+    searchInput.value.trim().toLowerCase();
 
     searchResults.innerHTML = "";
+
+    if(textoBuscado === "") {
+        searchResults.innerHTML = "<p>Please enter a character name.</p>";
+        return;
+    }
 
     fetch(urlFetch)
     .then(response => response.json())
@@ -127,9 +132,8 @@ if(searchInput && searchButton && searchResults) {
             }
         }
         
-        if(found === 0)
-        {
-            searchResults.innerHTML = "<p>No characters found.</p>";
+        if(found === 0) {
+            searchResults.innerHTML = "<p>No characters with that name found.</p>";
         }
     })
     .catch(e => {
