@@ -1,6 +1,6 @@
 const proxy = "https://cors-anywhere.herokuapp.com/";
     
-const apiKey = "d2671ca1d8517baa8e40eee1fc5fc534baee4945"; /*modificado por cuestiones de seguridad*/
+const apiKey = "d2671ca1d8517baa8e40eee1fc5fc534baee4945";
 
 const parametros = new URLSearchParams(window.location.search);
 
